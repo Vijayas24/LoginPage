@@ -1,3 +1,89 @@
-*{
-    color: red;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.flip-box {
+    width: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-box.flipped {
+    transform: rotateY(180deg);
+}
+
+.login-box, .register-box {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: black;
+}
+
+.login-box {
+    text-align: center;
+}
+
+.register-box {
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.login-box h2, .register-box h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 92%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.register-link, .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.register-link a, .login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover, .login-link a:hover {
+    text-decoration: underline;
 }
